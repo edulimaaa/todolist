@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/task-icon.png" type="image/x-icon" />
+    <!--js project-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--css project-->
+    <script src="js/scripts.js" defer></script>
+    <!--font-awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="todo-container">
+      <header>
+        <h1>To Do List</h1>
+        <img src="img/list-text.png" alt="icon list" style="width: 30px" />
+      </header>
+
+      <form id="todo-form">
+        <p>Adicionar uma tarefa:</p>
+        <div class="form-control">
+          <input
+            type="text"
+            id="todo-input"
+            maxlength="30"
+            placeholder="O que você vai fazer?"
+          />
+          <button type="submit">
+            <i class="fa-thin fa-plus"></i>
+          </button>
+        </div>
+      </form>
+
+      <form id="edit-form" class="hide">
+        <p>Edite a sua tarefa:</p>
+        <div class="form-control">
+          <input type="text" id="edit-input" />
+          <button type="submit">
+            <i class="fa-solid fa-check-double"></i>
+          </button>
+        </div>
+        <button id="cancel-edit-btn">Cancelar</button>
+      </form>
+
+      <div id="toolbar">
+        <div id="search">
+          <h4>Pesquisar:</h4>
+          <form>
+            <input type="text" id="search-input" placeholder="Buscar" />
+            <button id="erase-button">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </form>
+        </div>
+        <div id="filter">
+          <h4>Filtrar:</h4>
+          <select id="filter-select" class="select-option">
+            <option value="all">Todos</option>
+            <option value="done">Feitos</option>
+            <option value="todo">A fazer</option>
+          </select>
+        </div>
+      </div>
+      <div id="todo-list"></div>
+      <!--onde fica as tarefas-->
+    </div>
+    <audio id="done-song" src="audio/Toy_Message.mp3"></audio>
+  </body>
+</html>
